@@ -20,6 +20,6 @@ flowchart TB
   end
   HomeScreen((HomeScreen));
   homeScreenStateProvider ==> HomeScreen;
-  homeNotifierProvider -.-> HomeScreen;
+  homeScreenNotifierProvider -.-> HomeScreen;
   homeScreenStateProvider[[homeScreenStateProvider]];
-  homeNotifierProvider[[homeNotifierProvider]];
+  homeScreenNotifierProvider[[homeScreenNotifierProvider]];
