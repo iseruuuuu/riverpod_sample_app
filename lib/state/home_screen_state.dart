@@ -6,10 +6,12 @@ part 'home_screen_state.freezed.dart';
 @freezed
 class HomeScreenState with _$HomeScreenState {
   const factory HomeScreenState({
-    @Default(4) int counter,
+    @Default(0) int counter,
   }) = _HomeScreenState;
 }
 
-final homeScreenStateProvider = StateProvider((_) {
-  return const HomeScreenState();
-});
+final homeScreenStateProvider = StateProvider<HomeScreenState>(
+  (_) {
+    return const HomeScreenState();
+  },
+);

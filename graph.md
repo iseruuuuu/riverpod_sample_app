@@ -18,8 +18,7 @@ flowchart TB
     ConsumerWidget((widget));
     Provider[[provider]];
   end
-  HomeScreen((HomeScreen));
-  homeScreenStateProvider ==> HomeScreen;
-  homeScreenNotifierProvider -.-> HomeScreen;
-  homeScreenStateProvider[[homeScreenStateProvider]];
-  homeScreenNotifierProvider[[homeScreenNotifierProvider]];
+  Home((Home));
+  counterProvider ==> Home;
+  counterProvider -.-> Home;
+  counterProvider[[counterProvider]];

@@ -11,7 +11,6 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final counter = ref.watch(homeScreenStateProvider).counter;
-    final increment = ref.read(homeNotifierProvider).increment;
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -31,7 +30,7 @@ class HomeScreen extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: increment,
+        onPressed: ref.read(homeScreenNotifierProvider).increment,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
